@@ -38,11 +38,6 @@ class Customer(models.Model):
     email=models.EmailField(unique=True)
     phone=models.CharField(max_length=255)
     birth_date=models.DateField(null=True)
-    
-    class Meta:
-        db_table = 'store_customers'
-        indexes = [models.Index(fields=['last_name', 'first_name' ])
-        ] 
 
 
 class Order(models.Model):
